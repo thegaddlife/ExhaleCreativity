@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="blog-list blog-wrapper autocolumns-wrapper" id="blogList" data-controller="BlogLayout" data-controllers-bound="BlogLayout">
+      <div class="blog-list blog-wrapper autocolumns-wrapper" id="blogList">
 
         {.repeated section items}
 
