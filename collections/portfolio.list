@@ -12,8 +12,8 @@
       <div class="sqs-block html-block sqs-block-html" data-block-type="2">
 
         <div class="sqs-block-content">
-          <h1 class="text-align-center">{title}</h1>
-          <h2 dir="ltr" class="text-align-center">{description}</h2>
+          <h1 class="text-align-center">{collection.title}</h1>
+          <h2 dir="ltr" class="text-align-center">{collection.description}</h2>
         </div>
 
       </div>
