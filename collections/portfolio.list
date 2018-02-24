@@ -1,4 +1,4 @@
-{.section page}
+
 <div class="sqs-layout sqs-grid-12 columns-12" data-type="page">
 
   <div class="row sqs-row">
@@ -30,5 +30,4 @@
 
 {.repeated section items}
 <h1>{title}</h1>
-{.end}
 {.end}
