@@ -1,0 +1,44 @@
+<div class="sqs-layout sqs-grid-12 columns-12" data-type="page">
+
+  <div class="row sqs-row">
+
+    <div class="col sqs-col-12 span-12">
+
+      <div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47">
+        <div class="sqs-block-content">
+          <hr>
+        </div>
+      </div>
+
+      <div class="sqs-block html-block sqs-block-html" data-block-type="2">
+
+        <div class="sqs-block-content">
+          <h1 class="text-align-center">{collection.title}</h1>
+          <h2 dir="ltr" class="text-align-center">{collection.description}</h2>
+        </div>
+
+      </div>
+
+      <div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47">
+        <div class="sqs-block-content">
+          <hr>
+        </div>
+      </div>
+
+<!--
+      <div class="blog-list blog-wrapper autocolumns-wrapper" id="blogList" data-controller="BlogLayout" data-controllers-bound="BlogLayout">
+
+        {.repeated section items}
+
+        
+
+        {.end}
+
+      </div>
+-->
+
+    </div>
+
+  </div>
+
+</div>
