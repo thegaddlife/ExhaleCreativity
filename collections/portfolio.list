@@ -25,8 +25,7 @@
         </div>
       </div>
 
-      <div class="blog-list blog-wrapper autocolumns-wrapper" id="blogList">
-
+      <div class="blog-list blog-wrapper top-align-wrapper col-3-grid" id="blogList" data-controller="BlogLayout" data-controllers-bound="BlogLayout">
         {.repeated section items}
 
         <article class="entry entry--list h-entry has-main-image hentry category-plants category-styling author-laura-nguyen post-type-text article-index-1 autocolumns-item-wrapper"
