@@ -32,20 +32,20 @@
 
 {.repeated section items}
 
-<article class="entry entry--list h-entry has-main-image hentry category-plants category-styling author-laura-nguyen post-type-text article-index-1 autocolumns-item-wrapper" id="article-56b13a878259b50be1895f64" label="Blog Post" data-item-id="56b13a878259b50be1895f64" data-offset="1455319440000" style="width: 352.667px; top: 0px; left: 0px;">
-    <div class="thumbnail-title-wrapper" id="yui_3_17_2_1_1519491063392_404">
+<article class="entry entry--list h-entry has-main-image hentry category-plants category-styling author-laura-nguyen post-type-text article-index-1 autocolumns-item-wrapper" label="Portfolio Item" style="width: 352.667px; top: 0px; left: 0px;">
+    <div class="thumbnail-title-wrapper">
       
-      <div class="excerpt-thumb" id="yui_3_17_2_1_1519491063392_403">
-        <a href="/home/2016/2/12/spruce-up-your-coffee-table" class="excerpt-image content-fill autocolumns-image-wrapper" style="padding-bottom: 66%;" id="yui_3_17_2_1_1519491063392_402">
-          <img data-src="https://static1.squarespace.com/static/56730860a976af1587aa9e8c/5673088c1115e0e8174bec86/56b13a878259b50be1895f64/1455901380786/" data-image="https://static1.squarespace.com/static/56730860a976af1587aa9e8c/5673088c1115e0e8174bec86/56b13a878259b50be1895f64/1455901380786/" data-image-dimensions="2500x1666" data-image-focal-point="0.5,0.5" alt="Spruce Up Your Coffee Table" class="" src="https://static1.squarespace.com/static/56730860a976af1587aa9e8c/5673088c1115e0e8174bec86/56b13a878259b50be1895f64/1455901380786/?format=2500w" data-image-resolution="2500w" style="">
+      <div class="excerpt-thumb">
+        <a href="{sourceUrl}" class="excerpt-image content-fill autocolumns-image-wrapper" style="padding-bottom: 66%;">
+          <img data-src="{assetUrl}" data-image="{assetUrl}" data-image-dimensions="{originalSize}" data-image-focal-point="0.5,0.5" alt="{title}" class="" src="{assetUrl}?format=2500w" data-image-resolution="2500w" style="">
           <div class="thumb-overlay"></div>
         </a>
       </div>
       
     </div>
 
-    <div class="entry-text">
-      
+    <div class="entry-text">  
+
       <header class="entry-header">
         <time class="dt-published date-callout" datetime="2016-02-12" pubdate="">
           <div class="date-wrapper">
@@ -54,24 +54,19 @@
         </time>
         <h2 class="entry-title entry-title--list p-name" itemprop="headline" data-content-field="title">
           
-          <a href="/home/2016/2/12/spruce-up-your-coffee-table" class="u-url" rel="bookmark">
-          
-            <time class="dt-published date-highlight" datetime="2016-02-12" pubdate="">Feb 12 </time>
-            Spruce Up Your Coffee Table
+          <a href="{sourceUrl}" class="u-url" rel="bookmark">
+            <time class="dt-published date-highlight" datetime="2016-02-12" pubdate="">Feb '17 </time>
+            {title}
           </a>
         </h2>
       </header>
       
-
       <div class="entry-content">
-        <div class="blog-meta-item blog-meta-author"><a href="/?author=56b0f127f699bb061a0c6ed7" class="blog-author-name">Laura Nguyen</a> </div>
-
+        <div class="blog-meta-item blog-meta-author"><a href={customContent.memberUrl} class="blog-author-name">{customContent.memberName}</a> </div>
         <div class="blog-meta-item blog-categories"><a href="/?category=Plants" class="blog-category blog-category--Plants">Plants</a><span class="blog-meta-delimiter">, </span><a href="/?category=Styling" class="blog-category blog-category--Styling">Styling</a></div>
-
-        
-          <div class="entry-excerpt p-summary"><p>Red bougainvilleas are beautiful off and on the branch. They create more interesting shapes than roses or tulips.</p></div>
-        
+        <div class="entry-excerpt p-summary">{excerpt}</p></div>        
       </div>
+
     </div>
   </article>
 
