@@ -35,6 +35,15 @@
               <a href="{sourceUrl}" class="excerpt-image content-fill">
                 <img {@|image-meta} data-load="false" />
                 <div class="thumb-overlay"></div>
+
+                {.section categories}
+                <div class="portfolio-categories">
+                    {.repeated section @}
+                    <span class="portfolio-category blog-category--{@}">{@}</span>{.alternates with}
+                    {.end}
+                </div>
+                {.end} 
+
               </a>
             </div>
             {.or}
@@ -83,14 +92,6 @@
             {.or} {.end}
 
             <div class="entry-content">
-              {.section categories}
-              <div class="blog-meta-item blog-categories" style="display:block !important">
-                {.repeated section @}
-                  <a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a>{.alternates with}
-                  <span class="blog-meta-delimiter">, </span>
-                {.end}
-                </div>
-              {.end} 
               {.excerpt?}
                 <div class="entry-excerpt p-summary">{excerpt}</div>
               {.end}
