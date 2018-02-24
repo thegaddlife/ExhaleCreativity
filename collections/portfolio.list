@@ -25,7 +25,6 @@
         </div>
       </div>
 
-<!--
       <div class="blog-list blog-wrapper autocolumns-wrapper" id="blogList" data-controller="BlogLayout" data-controllers-bound="BlogLayout">
 
         {.repeated section items}
@@ -35,7 +34,6 @@
         {.end}
 
       </div>
--->
 
     </div>
 
