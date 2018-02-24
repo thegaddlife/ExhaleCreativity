@@ -28,53 +28,43 @@
       <div class="blog-list blog-wrapper top-align-wrapper col-3-grid" id="blogList" data-controller="BlogLayout" data-controllers-bound="BlogLayout">
         {.repeated section items}
 
-        <article class="entry entry--list h-entry has-main-image hentry category-plants category-styling author-laura-nguyen post-type-text article-index-1 autocolumns-item-wrapper"
-          label="Portfolio Item" style="width: 352.667px; top: 0px; left: 0px;">
-          <div class="thumbnail-title-wrapper">
-
-            <div class="excerpt-thumb">
-              <a href="{sourceUrl}" target="_blank" class="excerpt-image content-fill autocolumns-image-wrapper" style="padding-bottom: 66%;">
-                <img data-src="{assetUrl}" data-image="{assetUrl}" data-image-dimensions="{originalSize}" data-image-focal-point="0.5,0.5"
-                  alt="{title}" class="" src="{assetUrl}?format=2500w" data-image-resolution="2500w" style="">
-                <div class="thumb-overlay"></div>
-              </a>
-            </div>
-
-          </div>
-
-          <div class="entry-text">
-
-            <header class="entry-header">
-              <time class="dt-published date-callout" datetime="2016-02-12" pubdate="">
+        <article class="entry entry--list h-entry hentry category-finance-news author-dani-young post-type-text article-index-1 featured top-align-item-wrapper" id="article-578ea3f4b8a79b17038c62f6" label="Blog Post" data-item-id="578ea3f4b8a79b17038c62f6" data-offset="1529445960961" style="width: 344px;">
+    <div class="thumbnail-title-wrapper">
+      
+      <div class="entry-title-wrapper">
+        <div class="title-bg-wrapper">
+          <h2 class="entry-title entry-title--list" data-content-field="title">
+            
+            <a href="/news-notes-ready/2016/what-you-need-to-know-about-the-new-ftc-regulations" class="u-url" rel="bookmark">
+            
+              <time class="dt-published date-callout" datetime="2018-06-19" pubdate="">
                 <div class="date-wrapper">
-                  <span class="month">Feb </span>
-                  <span class="day">12</span>
+                  <span class="month">Jun </span><span class="day">19</span>
                 </div>
               </time>
-              <h2 class="entry-title entry-title--list p-name" itemprop="headline" data-content-field="title">
+              <time class="dt-published date-highlight" itemprop="datePublished" datetime="2018-06-19" pubdate="">Jun 19 </time>The Latest FTC Regulations
+            </a>
+          </h2>
+        </div>
+      </div>
+      
+    </div>
 
-                <a href="{sourceUrl}" target="_blank" class="u-url" rel="bookmark">
-                  <time class="dt-published date-highlight" datetime="2016-02-12" pubdate="">Feb '17 </time>
-                  {title}
-                </a>
-              </h2>
-            </header>
+    <div class="entry-text">
+      
+      
 
-            <div class="entry-content">
-              <div class="blog-meta-item blog-meta-author">
-                <a href="{customContent.memberUrl}" class="blog-author-name">{customContent.memberName}</a>
-              </div>
-              <div class="blog-meta-item blog-categories">
-                <a href="/?category=Plants" class="blog-category blog-category--Plants">Plants</a>
-                <span class="blog-meta-delimiter">, </span>
-                <a href="/?category=Styling" class="blog-category blog-category--Styling">Styling</a>
-              </div>
-              <div class="entry-excerpt p-summary">{excerpt}</p>
-              </div>
-            </div>
+      <div class="entry-content">
+        <div class="blog-meta-item blog-meta-author"><a href="/news-notes-ready/?author=5791136debbd1a7e071e22c2" class="blog-author-name">Dani Young</a> </div>
 
-          </div>
-        </article>
+        <div class="blog-meta-item blog-categories"><a href="/news-notes-ready/?category=Finance+News" class="blog-category blog-category--Finance News">Finance News</a></div>
+
+        
+          <div class="entry-excerpt p-summary"><p>Blog post excerpt text. Sed ac urna lacus. Donec fermentum venenatis ipsum, eu efficitur mi placerat quis. Donec et convallis metus, et luctus odio. Fusce porta quam purus, vel consectetur est luctus vel.</p></div>
+        
+      </div>
+    </div>
+  </article>
 
         {.end}
 
