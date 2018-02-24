@@ -27,6 +27,7 @@
 
       <div class="loading-spinner"></div>
       <div class="blog-list blog-wrapper" id="blogList" data-controller="BlogLayout">{.repeated section items}
+        
         <article class="entry entry--list h-entry grid-hidden {.main-image?} has-main-image {.end}{@|item-classes}"
           id="article-{id}" label="Blog Post" data-item-id="{id}" data-offset="{addedOn}" {.if pagination.nextPage}{.or} data-last-page{.end}>
           <div class="thumbnail-title-wrapper">
@@ -35,15 +36,6 @@
               <a href="{sourceUrl}" class="excerpt-image content-fill">
                 <img {@|image-meta} data-load="false" />
                 <div class="thumb-overlay"></div>
-
-                {.section categories}
-                <div class="portfolio-categories">
-                    {.repeated section @}
-                    <span class="portfolio-category blog-category--{@}">{@}</span>{.alternates with}
-                    {.end}
-                </div>
-                {.end} 
-
               </a>
             </div>
             {.or}
@@ -72,12 +64,13 @@
           <div class="entry-text">
             {.main-image?}
             <header class="entry-header">
-              <time class="dt-published date-callout" datetime="{addedOn|date %F}" pubdate>
-                <div class="date-wrapper">
-                  <span class="month">{addedOn|date %b} </span>
-                  <span class="day">{addedOn|date %e}</span>
+              {.section categories}
+                <div class="portfolio-categories">
+                    {.repeated section @}
+                    <span class="portfolio-category blog-category--{@}">{@}</span>{.alternates with}
+                    {.end}
                 </div>
-              </time>
+              {.end} 
               <h2 class="entry-title entry-title--list p-name" itemprop="headline" data-content-field="title">
                 {.passthrough?}
                 <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">
