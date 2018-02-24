@@ -1,4 +1,31 @@
+<div class="sqs-layout sqs-grid-12 columns-12" data-type="page">
 
+  <div class="row sqs-row">
+
+    <div class="col sqs-col-12 span-12">
+
+      <div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47">
+        <div class="sqs-block-content"><hr></div>
+      </div>
+
+      <div class="sqs-block html-block sqs-block-html" data-block-type="2">
+
+        <div class="sqs-block-content">
+          <h1 class="text-align-center">Community Portfolio</h1>
+          <h2 dir="ltr" class="text-align-center">See what our members are up to!&nbsp;</h2>
+        </div>
+
+      </div>
+
+      <div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47">
+        <div class="sqs-block-content"><hr></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
 {.repeated section items}
 <h1>{title}</h1>
