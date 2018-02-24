@@ -1,77 +1,94 @@
-<div class="sqs-layout sqs-grid-12 columns-12" data-type="page">
+  {# Show active filters }
+  {.section categoryFilter}
+  <p class="filter-heading filter-by-category loading" data-controller="FadeInContent">
+    All in <span class="category-name">{@}</span>
+  </p>
+  {.end}
 
-  <div class="row sqs-row">
+  {.section tagFilter}
+  <p class="filter-heading filter-by-tag loading" data-controller="FadeInContent">
+    All tagged <span class="category-name">{@}</span>
+  </p>
+  {.end}
 
-    <div class="col sqs-col-12 span-12">
-
-      <div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47">
-        <div class="sqs-block-content">
-          <hr>
-        </div>
-      </div>
-
-      <div class="sqs-block html-block sqs-block-html" data-block-type="2">
-
-        <div class="sqs-block-content">
-          <h1 class="text-align-center">{collection.title}</h1>
-          <h2 dir="ltr" class="text-align-center">{collection.description}</h2>
-        </div>
-
-      </div>
-
-      <div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47">
-        <div class="sqs-block-content">
-          <hr>
-        </div>
-      </div>
-
-      <div class="blog-list blog-wrapper top-align-wrapper col-3-grid" id="blogList" data-controller="BlogLayout" data-controllers-bound="BlogLayout">
-        {.repeated section items}
-
-        <article class="entry entry--list h-entry hentry category-finance-news author-dani-young post-type-text article-index-1 featured top-align-item-wrapper" id="article-578ea3f4b8a79b17038c62f6" label="Blog Post" data-item-id="578ea3f4b8a79b17038c62f6" data-offset="1529445960961" style="width: 344px;">
+  {.if authorFilter}
+  <div class="filter-heading filter-by-author loading" data-controller="FadeInContent">
+    <p>All by {author.displayName}</p>
+    {.if author.avatarId}
+    <div class="author-avatar content-fill">
+      <img class="author-avatar-image" data-src="{author.avatarAssetUrl}" data-image="{author.avatarAssetUrl}" data-image-focal-point="0.5,0.5">
+    </div>
+    {.end}
+  </div>
+  {.end}
+  <div class="loading-spinner"></div>
+  <div class="blog-list blog-wrapper" id="blogList" data-controller="BlogLayout">{.repeated section items}<article class="entry entry--list h-entry grid-hidden {.main-image?} has-main-image {.end}{@|item-classes}" id="article-{id}" label="Blog Post" data-item-id="{id}" data-offset="{addedOn}"{.if pagination.nextPage}{.or} data-last-page{.end}>
     <div class="thumbnail-title-wrapper">
-      
+      {.main-image?}
+      <div class="excerpt-thumb">
+        <a href="{fullUrl}" class="excerpt-image content-fill">
+          <img {@|image-meta} data-load="false" />
+          <div class="thumb-overlay"></div>
+        </a>
+      </div>
+      {.or}
       <div class="entry-title-wrapper">
         <div class="title-bg-wrapper">
           <h2 class="entry-title entry-title--list" data-content-field="title">
-            
-            <a href="/news-notes-ready/2016/what-you-need-to-know-about-the-new-ftc-regulations" class="u-url" rel="bookmark">
-            
-              <time class="dt-published date-callout" datetime="2018-06-19" pubdate="">
+            {.passthrough?}
+            <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">
+            {.or}
+            <a href="{fullUrl}" class="u-url" rel="bookmark">
+            {.end}
+              <time class="dt-published date-callout" datetime="{addedOn|date %F}" pubdate>
                 <div class="date-wrapper">
-                  <span class="month">Jun </span><span class="day">19</span>
+                  <span class="month">{addedOn|date %b} </span><span class="day">{addedOn|date %e}</span>
                 </div>
               </time>
-              <time class="dt-published date-highlight" itemprop="datePublished" datetime="2018-06-19" pubdate="">Jun 19 </time>The Latest FTC Regulations
+              <time class="dt-published date-highlight" itemprop="datePublished" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>{title}
             </a>
           </h2>
         </div>
       </div>
-      
+      {.end}
     </div>
 
     <div class="entry-text">
-      
-      
+      {.main-image?}
+      <header class="entry-header">
+        <time class="dt-published date-callout" datetime="{addedOn|date %F}" pubdate>
+          <div class="date-wrapper">
+            <span class="month">{addedOn|date %b} </span><span class="day">{addedOn|date %e}</span>
+          </div>
+        </time>
+        <h2 class="entry-title entry-title--list p-name" itemprop="headline" data-content-field="title" >
+          {.passthrough?}
+          <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">
+          {.or}
+          <a href="{fullUrl}" class="u-url" rel="bookmark">
+          {.end}
+            <time class="dt-published date-highlight" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>
+            {title}
+          </a>
+        </h2>
+      </header>
+      {.or}
+      {.end}
 
       <div class="entry-content">
-        <div class="blog-meta-item blog-meta-author"><a href="/news-notes-ready/?author=5791136debbd1a7e071e22c2" class="blog-author-name">Dani Young</a> </div>
+        {.section author}<div class="blog-meta-item blog-meta-author"><a href="{collection.fullUrl}?author={author.id}" class="blog-author-name">{displayName}</a> </div>{.end}
 
-        <div class="blog-meta-item blog-categories"><a href="/news-notes-ready/?category=Finance+News" class="blog-category blog-category--Finance News">Finance News</a></div>
+        {.section categories}<div class="blog-meta-item blog-categories">{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a>{.alternates with}<span class="blog-meta-delimiter">, </span>{.end}</div>{.end}
 
-        
-          <div class="entry-excerpt p-summary"><p>Blog post excerpt text. Sed ac urna lacus. Donec fermentum venenatis ipsum, eu efficitur mi placerat quis. Donec et convallis metus, et luctus odio. Fusce porta quam purus, vel consectetur est luctus vel.</p></div>
-        
-      </div>
-    </div>
-  </article>
-
+        {.excerpt?}
+          <div class="entry-excerpt p-summary">{excerpt}</div>
         {.end}
-
       </div>
-
     </div>
-
-  </div>
+  </article>{.end}
 
 </div>
+{.if pagination}
+{.if pagination.nextPage}<div class="load-more-wrapper"><a class="load-more" href="{pagination.nextPageUrl}">Load More</a></div>{.end}
+{.end}
+<div class="breaker"></div>
