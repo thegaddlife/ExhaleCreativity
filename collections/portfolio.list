@@ -83,14 +83,16 @@
             {.or} {.end}
 
             <div class="entry-content">
-              {.section author}
-              <div class="blog-meta-item blog-meta-author">
-                <a href="{collection.fullUrl}?author={author.id}" class="blog-author-name">{displayName}</a>
-              </div>{.end} {.section categories}
-              <div class="blog-meta-item blog-categories">{.repeated section @}
-                <a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a>{.alternates with}
-                <span class="blog-meta-delimiter">, </span>{.end}</div>{.end} {.excerpt?}
-              <div class="entry-excerpt p-summary">{excerpt}</div>
+              {.section categories}
+              <div class="blog-meta-item blog-categories" style="display:block !important">
+                {.repeated section @}
+                  <a href="{collection.fullUrl}?category={@|url-encode}" class="blog-category blog-category--{@}">{@}</a>{.alternates with}
+                  <span class="blog-meta-delimiter">, </span>
+                {.end}
+                </div>
+              {.end} 
+              {.excerpt?}
+                <div class="entry-excerpt p-summary">{excerpt}</div>
               {.end}
             </div>
           </div>
