@@ -25,11 +25,69 @@
         </div>
       </div>
 
+    </div>
+
+  </div>
+
+  <div class="row sqs-row">
+    <div class="col sqs-col-5 span-5">
+      <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_13_1469046996398_17457">
+        <div class="sqs-block-content">
+          <h2 class="text-align-center">CREATIVE LIBRARY</h2>
+          <p class="text-align-center">(members only!)</p>
+          <p class="text-align-center">Come on in to peruse our collection of writing prompts, creativity lessons,&nbsp;artist interviews, and more! Pace
+            yourself, we've got plenty of content to explore and add new items every month.</p>
+        </div>
+      </div>
+      <div class="sqs-block button-block sqs-block-button" data-block-type="53" id="block-yui_3_17_2_2_1519083757371_15719">
+        <div class="sqs-block-content" id="yui_3_17_2_1_1519533267054_218">
+          <div class="sqs-block-button-container--center" data-alignment="center" data-button-size="medium" id="yui_3_17_2_1_1519533267054_217">
+            <a href="https://www.exhalecreativity.com/join-us/" class="sqs-block-button-element--medium sqs-block-button-element" data-initialized="true">Sign Up Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col sqs-col-2 span-2">
+      <div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_6_1517978622958_62809">
+        <div class="sqs-block-content">&nbsp;</div>
+      </div>
+      <div class="sqs-block horizontalrule-block sqs-block-horizontalrule" data-block-type="47" id="block-yui_3_17_2_6_1518066422706_15966">
+        <div class="sqs-block-content">
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="col sqs-col-5 span-5">
+      <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_50_1469125549268_116399">
+        <div class="sqs-block-content">
+          <h2 class="text-align-center">CREATIVE MARKETPLACE</h2>
+          <p class="text-align-center">(anyone can shop!)</p>
+          <p class="text-align-center">Shop our collection of digital downloads, workbooks, mentoring calls, small group workshops and more! While anyone
+            can shop, members get special discount pricing on everything in the store.</p>
+        </div>
+      </div>
+      <div class="sqs-block button-block sqs-block-button" data-block-type="53" id="block-yui_3_17_2_2_1519083757371_19430">
+        <div class="sqs-block-content" id="yui_3_17_2_1_1519533267054_226">
+          <div class="sqs-block-button-container--center" data-alignment="center" data-button-size="medium" id="yui_3_17_2_1_1519533267054_225">
+            <a href="https://www.exhalecreativity.com/marketplace/" class="sqs-block-button-element--medium sqs-block-button-element"
+              data-initialized="true">Enter Shop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row sqs-row">
+
+    <div class="col sqs-col-12 span-12">
+
       <div class="loading-spinner"></div>
-      <div class="blog-list blog-wrapper" id="blogList" data-controller="BlogLayout">{.repeated section items}
-        
-        <article class="entry entry--list h-entry grid-hidden {.main-image?} has-main-image {.end}{@|item-classes}"
-          id="article-{id}" label="Blog Post" data-item-id="{id}" data-offset="{addedOn}" {.if pagination.nextPage}{.or} data-last-page{.end}>
+      <div class="blog-list blog-wrapper" id="blogList" data-controller="BlogLayout">
+
+        {.repeated section items}
+
+        <article class="entry entry--list h-entry grid-hidden {.main-image?} has-main-image {.end}{@|item-classes}" id="article-{id}"
+          label="Portfolio Item" data-item-id="{id}" data-offset="{addedOn}" {.if pagination.nextPage}{.or} data-last-page{.end}>
           <div class="thumbnail-title-wrapper">
             {.main-image?}
             <div class="excerpt-thumb">
@@ -65,12 +123,11 @@
             {.main-image?}
             <header class="entry-header">
               {.section categories}
-                <div class="portfolio-categories">
-                    {.repeated section @}
-                    <span class="portfolio-category blog-category--{@}">{@}</span>{.alternates with}
-                    {.end}
-                </div>
-              {.end} 
+              <div class="portfolio-categories">
+                {.repeated section @}
+                <span class="portfolio-category portfolio-category--{@}">{@}</span>{.alternates with} {.end}
+              </div>
+              {.end}
               <h2 class="entry-title entry-title--list p-name" itemprop="headline" data-content-field="title">
                 {.passthrough?}
                 <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">
@@ -86,13 +143,15 @@
 
             <div class="entry-content">
               {.excerpt?}
-                <div class="entry-excerpt p-summary">{excerpt}</div>
+              <div class="entry-excerpt p-summary">{excerpt}</div>
               {.end}
             </div>
           </div>
-        </article>{.end}
+        </article>
+        {.end}
 
       </div>
+
       {.if pagination} {.if pagination.nextPage}
       <div class="load-more-wrapper">
         <a class="load-more" href="{pagination.nextPageUrl}">Load More</a>
