@@ -1,6 +1,28 @@
 .collection-type-portfolio {
 
-    // TODO: make some cool outline and hover effect
+    article.entry--list:not(.entry--related) {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 0 0;
+        -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0 center;
+        -moz-transform-origin: 0 0 center;
+        -ms-transform-origin: 0 0 center;
+        -o-transform-origin: 0 0 center;
+        transform-origin: 0 0 center;
+        -webkit-transition: opacity 360ms ease-in-out, transform 160ms ease-in-out;
+        -moz-transition: opacity 360ms ease-in-out, transform 160ms ease-in-out;
+        -ms-transition: opacity 360ms ease-in-out, transform 160ms ease-in-out;
+        -o-transition: opacity 360ms ease-in-out, transform 160ms ease-in-out;
+        transition: opacity 360ms ease-in-out, transform 160ms ease-in-out;
+    }
+
 
     .portfolio-categories {
         display: inline-block;
