@@ -140,7 +140,7 @@
     </div>
     <span class="pagination-title-wrapper">
       {.main-image?}<img {@|image-meta} />{.end}
-      <h2 class="blog-item-pagination-title"><time class="dt-published date-pagination" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>{title}</h2>
+      <h2 class="blog-item-pagination-title"><time class="dt-published date-pagination desktop-hidden subDesktop-hidden mobile-hidden" datetime="{addedOn|date %F}" pubdate>{addedOn|date %b %e} </time>{title}</h2>
     </span>
   </a>{.or}{.end}
 </section>
