@@ -1,7 +1,5 @@
 $(function () {
 
-  console.log("Test");
-
   // get product item id
   //var productId = document.querySelector(".ProductItem").dataset.itemId;
 
@@ -26,6 +24,8 @@ $(function () {
       // create a label
 
       // set the stock total to the label
+      var text = "Spots available: " + stockTotal;
+      $(".product-quantity-input").append("<div class='qty-in-stock'>" + text + "</div>");
 
     }
 
