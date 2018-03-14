@@ -1,31 +1,28 @@
 $(function () {
 
-  $(document).on("ready", function () {
-    console.log("Test");
+  console.log("Test");
 
-    // get product item id
-    //var productId = document.querySelector(".ProductItem").dataset.itemId;
+  // get product item id
+  //var productId = document.querySelector(".ProductItem").dataset.itemId;
 
-    // get product url
-    var url = document.querySelector("meta[property='og:url']").getAttribute('content');
+  // get product url
+  var url = document.querySelector("meta[property='og:url']").getAttribute('content');
 
-    // using product url, get the json item
-    $.getJSON(
-      url + "?format=json"
-    ).done(function (product) {
+  // using product url, get the json item
+  $.getJSON(
+    url + "?format=json"
+  ).done(function (product) {
 
-      console.log(product);
+    console.log(product);
 
-      // get the stock total
-      var stockTotal = product.structuredContent.variants.qtyInStock;
+    // get the stock total
+    var stockTotal = product.structuredContent.variants.qtyInStock;
 
-      console.log(stockTotal);
+    console.log(stockTotal);
 
-      // create a label
+    // create a label
 
-      // set the stock total to the label
-
-    });
+    // set the stock total to the label
 
   });
 
