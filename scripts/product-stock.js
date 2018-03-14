@@ -15,14 +15,18 @@ $(function () {
 
     console.log(product);
 
-    // get the stock total
-    var stockTotal = product.item.structuredContent.variants.qtyInStock;
+    if (product.item) {
 
-    console.log(stockTotal);
+      // get the stock total
+      var stockTotal = product.item.structuredContent.variants[0].qtyInStock;
 
-    // create a label
+      console.log(stockTotal);
 
-    // set the stock total to the label
+      // create a label
+
+      // set the stock total to the label
+
+    }
 
   });
 
