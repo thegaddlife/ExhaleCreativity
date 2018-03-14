@@ -15,7 +15,8 @@ $(function () {
 
     console.log(product);
 
-    if (product.item) {
+    // make sure this is a product and it has inventory
+    if (product.item && product.item.structuredContent.variants.length > 0) {
 
       // get the stock total
       var stockTotal = product.item.structuredContent.variants[0].qtyInStock;
