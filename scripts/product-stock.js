@@ -16,7 +16,7 @@ $(function () {
     console.log(product);
 
     // get the stock total
-    var stockTotal = product.structuredContent.variants.qtyInStock;
+    var stockTotal = product.item.structuredContent.variants.qtyInStock;
 
     console.log(stockTotal);
 
